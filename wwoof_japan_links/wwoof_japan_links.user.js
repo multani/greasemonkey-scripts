@@ -7,6 +7,7 @@
 
 
 function transformHostsLinks() {
+    /** Add links to hosts list */
 
     var table = document.getElementById('cbUserTable');
     var tbody = table.getElementsByTagName('tbody')[0];
@@ -41,6 +42,10 @@ function transformHostsLinks() {
 
 
 function reParent(node, newParent) {
+    /** Reparent the node to the specified parent.
+     *
+     * (and make new_parent a child of node's old parent. */
+
     var parent = node.parentNode;
     parent.removeChild(node);
     newParent.appendChild(node);
